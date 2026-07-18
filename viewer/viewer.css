@@ -1,0 +1,142 @@
+:root {
+    --primary: #0060df;
+    --primary-hover: #003eaa;
+    --bg-color: #f9f9fb;
+    --text-color: #15141a;
+    --border-color: #d7d7db;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+/* Welcome Screen */
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #5b5b66;
+    margin-bottom: 20px;
+}
+
+p.small {
+    font-size: 14px;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.primary-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+    background-color: rgba(0, 96, 223, 0.1);
+}
+
+/* Drag & Drop Overlay */
+#drop-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 96, 223, 0.9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-message {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+/* Viewer Container */
+#viewer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+}
+
+#toolbar {
+    height: 48px;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+#filename {
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+}
+
+#content-frame {
+    flex: 1;
+    border: none;
+    width: 100%;
+    background: white;
+}
+
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHT Viewer</title>
+    <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+    <div id="drop-overlay" class="hidden">
+        <div class="drop-message" data-i18n="dropMessage">Drop your .mht file here</div>
+    </div>
+    
+    <div id="welcome-screen">
+        <div class="logo">📄</div>
+        <h1 data-i18n="extensionName">MHT Viewer</h1>
+        <p data-i18n="dragDropText">Drag and drop an .mht file anywhere on this page to view it.</p>
+        <p class="small" data-i18n="orUseButtonText">Or use the button below to select a file.</p>
+        <input type="file" id="file-input" accept=".mht,.mhtml" class="hidden-input">
+        <button id="browse-btn" class="primary-btn" data-i18n="selectFileBtn">Select File</button>
+    </div>
+
+    <div id="viewer-container" class="hidden">
+        <div id="toolbar">
+            <span id="filename" data-i18n="noFileLoaded">No file loaded</span>
+            <button id="close-btn" class="secondary-btn" data-i18n="closeViewerBtn">Close Viewer</button>
+        </div>
+        <iframe id="content-frame" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+    </div>
+
+    <script src="parser.js"></script>
+    <script src="viewer.js"></script>
+</body>
+</html>

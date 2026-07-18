@@ -1,0 +1,49 @@
+{
+  "extensionName": {
+    "message": "MHT Viewer",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "View .mht files by dropping them into a dedicated tab.",
+    "description": "Description of the extension."
+  },
+  "openViewer": {
+    "message": "Open MHT Viewer",
+    "description": "Tooltip for the toolbar button."
+  },
+  "dropMessage": {
+    "message": "Drop your .mht file here"
+  },
+  "dragDropText": {
+    "message": "Drag and drop an .mht file anywhere on this page to view it."
+  },
+  "orUseButtonText": {
+    "message": "Or use the button below to select a file."
+  },
+  "selectFileBtn": {
+    "message": "Select File"
+  },
+  "noFileLoaded": {
+    "message": "No file loaded"
+  },
+  "closeViewerBtn": {
+    "message": "Close Viewer"
+  },
+  "loadingMsg": {
+    "message": "Loading $FILE$...",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "invalidFileErr": {
+    "message": "Please select a valid .mht or .mhtml file."
+  },
+  "parseErr": {
+    "message": "Failed to parse this .mht file. See console for details."
+  },
+  "readErr": {
+    "message": "Error reading the file."
+  }
+}

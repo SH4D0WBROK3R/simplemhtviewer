@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Document Base -->
+  <rect x="8" y="4" width="32" height="40" rx="4" fill="#0060df" />
+  
+  <!-- Folded Corner -->
+  <path d="M40 12 L32 12 L32 4 Z" fill="#003eaa" />
+  
+  <!-- "MHT" Text -->
+  <text x="24" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">MHT</text>
+  
+  <!-- Document Lines -->
+  <rect x="14" y="32" width="20" height="2" rx="1" fill="white" opacity="0.8"/>
+  <rect x="14" y="36" width="14" height="2" rx="1" fill="white" opacity="0.8"/>
+</svg>

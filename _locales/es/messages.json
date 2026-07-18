@@ -1,0 +1,46 @@
+{
+  "extensionName": {
+    "message": "Visor MHT"
+  },
+  "extensionDescription": {
+    "message": "Visualiza archivos .mht arrastrándolos a una pestaña dedicada."
+  },
+  "openViewer": {
+    "message": "Abrir Visor MHT"
+  },
+  "dropMessage": {
+    "message": "Suelta tu archivo .mht aquí"
+  },
+  "dragDropText": {
+    "message": "Arrastra y suelta un archivo .mht en cualquier lugar de esta página para verlo."
+  },
+  "orUseButtonText": {
+    "message": "O usa el botón de abajo para seleccionar un archivo."
+  },
+  "selectFileBtn": {
+    "message": "Seleccionar archivo"
+  },
+  "noFileLoaded": {
+    "message": "Ningún archivo cargado"
+  },
+  "closeViewerBtn": {
+    "message": "Cerrar Visor"
+  },
+  "loadingMsg": {
+    "message": "Cargando $FILE$...",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "invalidFileErr": {
+    "message": "Por favor selecciona un archivo .mht o .mhtml válido."
+  },
+  "parseErr": {
+    "message": "Error al analizar el archivo .mht. Revisa la consola para más detalles."
+  },
+  "readErr": {
+    "message": "Error al leer el archivo."
+  }
+}
