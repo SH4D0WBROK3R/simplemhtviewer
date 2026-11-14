@@ -10,7 +10,7 @@
     <div id="drop-overlay" class="hidden">
         <div class="drop-message" data-i18n="dropMessage">Drop your .mht file here</div>
     </div>
-    
+
     <div id="welcome-screen">
         <div class="logo">📄</div>
         <h1 data-i18n="extensionName">MHT Viewer</h1>
@@ -25,7 +25,8 @@
             <span id="filename" data-i18n="noFileLoaded">No file loaded</span>
             <button id="close-btn" class="secondary-btn" data-i18n="closeViewerBtn">Close Viewer</button>
         </div>
-        <iframe id="content-frame" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+        <!-- No allow-same-origin / allow-scripts: the page inside is untrusted and must not run with the extension's origin -->
+        <iframe id="content-frame" sandbox="allow-popups"></iframe>
     </div>
 
     <script src="parser.js"></script>
