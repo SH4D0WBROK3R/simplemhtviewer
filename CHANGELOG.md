@@ -15,6 +15,7 @@
 **Security**
 - A saved page can no longer run programs inside the viewer. It is shown in a locked box.
 - A saved page no longer connects to the internet. Only what is stored inside the file is shown.
+- A saved page can no longer send the viewer to another website on its own (automatic redirects are removed), and it cannot submit forms.
 - The extension asks for one permission less (`activeTab`).
 
 **Things you may notice**
@@ -34,6 +35,7 @@
 **Seguridad**
 - Una página guardada ya no puede ejecutar programas dentro del visor. Se muestra en una caja cerrada.
 - Una página guardada ya no se conecta a internet. Solo se muestra lo que viene guardado en el archivo.
+- Una página guardada ya no puede mandar el visor a otro sitio web por su cuenta (se eliminan las redirecciones automáticas) ni enviar formularios.
 - La extensión pide un permiso menos (`activeTab`).
 
 **Lo que puedes notar**

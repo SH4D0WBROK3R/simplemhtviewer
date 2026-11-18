@@ -1,6 +1,6 @@
 const MHTParser = {
     // Injected into the saved page: nothing remote may load (offline viewer, no tracking).
-    CSP: '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; img-src data:; style-src \'unsafe-inline\' data:; font-src data:; media-src data:; frame-src data:">',
+    CSP: '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; img-src data:; style-src \'unsafe-inline\' data:; font-src data:; media-src data:; frame-src data:; base-uri \'none\'; form-action \'none\'">',
 
     parse: function(buffer) {
         // One char per byte, to split on boundaries without losing data. Not
@@ -121,9 +121,14 @@ const MHTParser = {
             html = html.replace(new RegExp(pattern, 'gi'), m => map.get(m.toLowerCase()));
         }
 
-        // 6. Lock the page down (after <head>, not before the doctype: that would force quirks mode)
-        const headTag = /<head(\s[^>]*)?>/i;
-        return headTag.test(html) ? html.replace(headTag, m => m + this.CSP) : this.CSP + html;
+        // 6. Lock the page down. CSP does not stop navigation, so also drop <meta refresh>
+        //    (it could send the viewer to a remote page on open). Links still need a click.
+        html = html.replace(/<meta\b[^>]*http-equiv\s*=\s*["']?refresh["']?[^>]*>/gi, '');
+        // Insert after <head>; else after <html>; else after the doctype (never before it: that forces quirks mode)
+        for (const re of [/<head(\s[^>]*)?>/i, /<html(\s[^>]*)?>/i, /^\s*<!doctype[^>]*>/i]) {
+            if (re.test(html)) return html.replace(re, m => m + this.CSP);
+        }
+        return this.CSP + html;
     },
 
     parseHeaders: function(headersStr) {
