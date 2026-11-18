@@ -16,7 +16,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "simplemhtviewer@sh4d0wbroker",
+      "id": "mht-viewer@yourdomain.com",
       "data_collection_permissions": {
         "required": ["none"]
       }

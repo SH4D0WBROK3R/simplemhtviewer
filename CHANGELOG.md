@@ -18,9 +18,6 @@
 - A saved page can no longer send the viewer to another website on its own (automatic redirects are removed), and it cannot submit forms.
 - The extension asks for one permission less (`activeTab`).
 
-**Other**
-- The extension now has its own ID: `simplemhtviewer@sh4d0wbroker`.
-
 **Things you may notice**
 - Pages that needed their own JavaScript (menus, tabs) look simpler.
 - Anything not stored inside the file is left empty instead of being downloaded.
@@ -40,9 +37,6 @@
 - Una página guardada ya no se conecta a internet. Solo se muestra lo que viene guardado en el archivo.
 - Una página guardada ya no puede mandar el visor a otro sitio web por su cuenta (se eliminan las redirecciones automáticas) ni enviar formularios.
 - La extensión pide un permiso menos (`activeTab`).
-
-**Otros**
-- La extensión ahora tiene su propio ID: `simplemhtviewer@sh4d0wbroker`.
 
 **Lo que puedes notar**
 - Las páginas que necesitaban su propio JavaScript (menús, pestañas) se ven más simples.
